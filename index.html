@@ -62,8 +62,7 @@ p{margin:0;max-width:62ch;text-wrap:pretty}
 
 /* swatch traka */
 .swatches{display:flex;height:46px;overflow:hidden}
-.swatches span{flex:1 1 0;min-width:0;position:relative;font-family:var(--f-mono);font-size:.6rem;letter-spacing:.04em;text-transform:uppercase;
-  display:flex;align-items:flex-end;padding:0 0 6px 7px;white-space:nowrap;overflow:hidden}
+.swatches span{flex:1 1 0;min-width:0}
 @media (max-width:640px){.swatches span:nth-child(n+7){display:none}}
 
 /* header + hero */
@@ -431,10 +430,9 @@ p{max-width:68ch}
 <script>
 (function(){
   // Trake nijansi: Irkom lazure + Isomat fuge + brend boje
-  var a=[["#F4F1EA","Bela"],["#F2C230","Žuta"],["#E4572E","Narandžasta"],["#C8A16A","Bor"],["#A0652F","Tik"],["#6B4226","Orah"],["#7A2E1F","Mahagoni"],["#2C1E17","Ebanovina"],["#9C9A92","Cement siva"],["#5B6A7A","Tamno siva"],["#7BA05B","Zelena"],["#3E7CB1","Plava"]];
+  var a=["#F4F1EA","#F2C230","#E4572E","#C8A16A","#A0652F","#6B4226","#7A2E1F","#2C1E17","#9C9A92","#5B6A7A","#7BA05B","#3E7CB1"];
   function fill(id,rev){var el=document.getElementById(id);if(!el)return;var l=rev?a.slice().reverse():a;
-    el.innerHTML=l.map(function(s){var c=s[0];var r=parseInt(c.substr(1,2),16),g=parseInt(c.substr(3,2),16),b=parseInt(c.substr(5,2),16);
-      var light=(r*299+g*587+b*114)/1000>150;return '<span style="background:'+c+';color:'+(light?'#1B2430':'#F4F1EA')+'">'+s[1]+'</span>'}).join('')}
+    el.innerHTML=l.map(function(c){return '<span style="background:'+c+'"></span>'}).join('')}
   fill('sw1');fill('sw2',true);
 
   // SR / CZ
