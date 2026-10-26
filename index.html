@@ -228,6 +228,9 @@ p{max-width:68ch}
 .hero .in{align-items:start}
 .hero-photo img{aspect-ratio:auto;height:clamp(220px,32vw,360px)}
 .card img{aspect-ratio:auto;height:170px}
+.gallery,.gallery[class]{grid-auto-rows:170px!important;grid-template-rows:none!important}
+.gallery figure,.gallery figure:first-child{grid-row:auto!important;grid-column:auto!important;aspect-ratio:auto!important;height:170px!important}
+.gallery img,.gallery .ph-photo{width:100%!important;height:170px!important;object-fit:cover!important;aspect-ratio:auto!important;display:block}
 @media (max-width:860px){.hero-photo{order:2}.hero-photo img{height:220px}}
 </style>
 
