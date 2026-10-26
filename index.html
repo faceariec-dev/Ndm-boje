@@ -218,6 +218,17 @@ section[id],header[id]{scroll-margin-top:84px}
   opacity:0;visibility:hidden;transform:translateY(12px);transition:opacity .2s,transform .2s,visibility .2s}
 .totop.show{opacity:1;visibility:visible;transform:none}
 .totop svg{width:22px;height:22px}
+/* readability pass */
+body{font-size:1.0625rem;line-height:1.6}
+p{max-width:68ch}
+.card p{font-size:1rem}
+.hero h1{color:#fff}
+.hero h1 mark{background:none;color:inherit;padding:0;text-decoration:underline;text-decoration-color:var(--yellow);text-decoration-thickness:3px;text-underline-offset:.22em;text-decoration-skip-ink:auto}
+.hero h1{font-size:clamp(2rem,4.6vw,3.6rem)}
+.hero .in{align-items:start}
+.hero-photo img{aspect-ratio:auto;height:clamp(220px,32vw,360px)}
+.card img{aspect-ratio:auto;height:170px}
+@media (max-width:860px){.hero-photo{order:2}.hero-photo img{height:220px}}
 </style>
 
 <!-- 1 HERO · tamna -->
