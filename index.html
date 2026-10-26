@@ -1,4 +1,5 @@
 <title>NDM Boje Vranje</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="claude:viewport-fit-sides" content="cover">
 <meta name="description" content="NDM Boje, Vranje: boje, lakovi, lazure, građevinska hemija i alat. Sime Pogačarevića 16, 17500 Vranje.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -85,7 +86,7 @@ p{margin:0;max-width:62ch;text-wrap:pretty}
 .nav{display:flex;gap:22px;font-size:.95rem;flex-wrap:wrap}
 .nav a{text-decoration:none;color:var(--paper-soft)}
 .nav a:hover{color:var(--yellow)}
-@media (max-width:720px){.nav{display:none}}
+@media (max-width:720px){.top{justify-content:center}.nav{width:100%;justify-content:center;gap:4px 6px}.nav a{padding:10px 12px;min-height:44px;display:inline-flex;align-items:center}}
 
 .hero .in{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(28px,5vw,64px);align-items:center;padding-top:clamp(36px,5vw,64px)}
 .hero-copy{display:grid;gap:24px;min-width:0}
@@ -184,6 +185,29 @@ p{margin:0;max-width:62ch;text-wrap:pretty}
 /* footer */
 footer .in{padding-block:36px!important;display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px 28px;align-items:center;font-size:.88rem;color:var(--paper-soft)}
 footer .legal{font-family:var(--f-mono);font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;max-width:60ch;line-height:1.6}
+/* mobile */
+html,body{overflow-x:hidden}
+img,svg,video,iframe{max-width:100%}
+@media (max-width:900px){
+  .hero .in,.about,.contact{grid-template-columns:1fr}
+  .cards{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:600px){
+  body{font-size:1rem}
+  h1{font-size:clamp(2rem,9vw,2.6rem)}
+  h2{font-size:clamp(1.6rem,7vw,2.1rem)}
+  .hero .lead{font-size:1.05rem}
+  .cards,.brands-grid{grid-template-columns:1fr}
+  .brands-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .gallery{grid-template-columns:1fr;grid-auto-rows:auto}
+  .gallery figure,.gallery figure:first-child{grid-column:auto;grid-row:auto;aspect-ratio:4/3}
+  .btns{flex-direction:column;align-items:stretch}
+  .btn{justify-content:center;min-height:48px}
+  .copy,.draftbar button{min-height:40px;padding:8px 12px}
+  .ph{white-space:normal}
+  .hero-photo .tag{right:6px;top:-10px}
+  .map .pin b{white-space:normal}
+}
 </style>
 
 <div class="band draftbar" id="draftbar">
