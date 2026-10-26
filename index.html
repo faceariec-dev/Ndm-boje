@@ -268,6 +268,18 @@ footer .logo-word small{color:var(--paper-soft);opacity:1}
   .topbar .logo-word small{font-size:.58rem}
   .topbar .nav a{padding:6px 8px}
 }
+/* žuti podmeni */
+.subnav{background:#F2B705;border-top:1px solid rgba(0,0,0,.12);margin-inline:calc(-1 * max(16px,env(safe-area-inset-left,0px))) calc(-1 * max(16px,env(safe-area-inset-right,0px)))}
+.topbar .subnav .nav{max-width:var(--wrap);margin:0 auto;padding-inline:max(16px,var(--pad,16px));display:flex;gap:4px;justify-content:center;flex-wrap:wrap;width:auto;order:0}
+.topbar .subnav .nav a{color:#1B2430;font-weight:600;padding:0 14px;min-height:40px;display:inline-flex;align-items:center;border-radius:0;background:transparent;text-decoration:none;box-shadow:inset 0 -3px 0 transparent}
+.topbar .subnav .nav a:hover,.topbar .subnav .nav a[aria-current]{background:#D9A300;color:#1B2430;box-shadow:inset 0 -3px 0 #1B2430}
+.topbar .subnav .nav a:focus-visible{outline:3px solid #1B2430;outline-offset:-3px}
+section[id],header[id]{scroll-margin-top:104px}
+@media (max-width:720px){
+  .topbar .subnav .nav{justify-content:space-between;gap:0;padding-inline:8px}
+  .topbar .subnav .nav a{padding:0 8px;font-size:.92rem}
+  section[id],header[id]{scroll-margin-top:96px}
+}
 </style>
 
 <!-- 1 HERO · tamna -->
@@ -276,13 +288,15 @@ footer .logo-word small{color:var(--paper-soft);opacity:1}
     <a class="logo" href="#top" aria-label="NDM Boje">
       <span class="logo-word">NDM BOJE<small>VRANJE</small></span>
     </a>
-    <nav class="nav" aria-label="Glavna navigacija">
+    <span class="lang" role="group" aria-label="Jezik / Jazyk"><button type="button" id="l-sr" aria-pressed="true">SR</button><button type="button" id="l-cs" aria-pressed="false">CZ</button></span>
+  </div>
+  <div class="subnav">
+    <nav class="nav subnav-in" aria-label="Glavna navigacija">
       <a href="#o-nama" data-cs="O nás">O nama</a>
       <a href="#asortiman" data-cs="Sortiment">Asortiman</a>
       <a href="#brendovi" data-cs="Značky">Brendovi</a>
       <a href="#kontakt" data-cs="Kontakt">Kontakt</a>
     </nav>
-    <span class="lang" role="group" aria-label="Jezik / Jazyk"><button type="button" id="l-sr" aria-pressed="true">SR</button><button type="button" id="l-cs" aria-pressed="false">CZ</button></span>
   </div>
 </div>
 <header class="band dark hero" id="top">
