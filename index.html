@@ -1,9 +1,8 @@
-<html lang="sr-Latn">
 <meta charset="utf-8">
-<title>NDM Boje Vranje – prodavnica boja i lakova</title>
+<title>NDM Boje Vranje</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="NDM Boje, prodavnica boja i lakova u Vranju: boje, lakovi, lazure, građevinska hemija, termoizolacija, alat, sprejevi i auto-reparatura, uz toniranje boja na mašini. Sime Pogačarevića 16, tel. +381 62 509 095.">
+<meta name="description" content="NDM Boje, Vranje: boje, lakovi, lazure, građevinska hemija i alat. Sime Pogačarevića 16, 17500 Vranje.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap&subset=latin-ext">
@@ -57,6 +56,9 @@ p{margin:0;max-width:62ch;text-wrap:pretty}
 .dark .head p{color:var(--paper-soft)}
 
 /* jezik */
+.lang{display:flex;gap:6px}
+.lang button{font:600 .8rem var(--f-body);cursor:pointer;border:1.5px solid var(--paper-soft);background:transparent;color:var(--paper);padding:6px 10px;border-radius:3px;min-height:36px}
+.lang button[aria-pressed="true"]{background:var(--yellow);border-color:var(--yellow);color:var(--ink)}
 .demo-note{font-size:.75rem;opacity:.75}
 
 /* swatch traka */
@@ -237,6 +239,7 @@ p{max-width:68ch}
 .btn-y:hover{background:#A91B23}
 .btn-o:hover{border-color:var(--red-tint);color:var(--red-tint)}
 .nav a:hover,.nav a[aria-current]{color:var(--red-tint)}
+.lang button[aria-pressed="true"]{background:var(--red);border-color:var(--red);color:#fff}
 .dark .eyebrow{color:var(--red-tint)}
 .dark .eyebrow::before{background:var(--red)}
 .light p a:not(.btn){color:var(--red)}
@@ -254,6 +257,8 @@ footer .logo-word small{color:#fff;opacity:.85}
 .topbar .nav a{color:#fff;padding:8px 10px;border-radius:3px;text-decoration:underline;text-decoration-color:transparent;text-decoration-thickness:2px;text-underline-offset:6px}
 .topbar .nav a:hover,.topbar .nav a[aria-current]{color:#fff;background:#A51A22;text-decoration-color:#fff}
 .topbar a:focus-visible,.topbar button:focus-visible{outline:3px solid #FFD400;outline-offset:2px}
+.topbar .lang button{border-color:#fff;color:#fff;background:transparent}
+.topbar .lang button[aria-pressed="true"]{background:#fff;border-color:#fff;color:#C8202A}
 .totop{border:2px solid #fff;box-shadow:0 0 0 1px rgba(0,0,0,.25),0 6px 18px rgba(0,0,0,.35)!important}
 footer .logo-word,footer .logo-word[class]{background:none;padding:0;color:#fff;font-size:1.6rem}
 footer .logo-word small{color:var(--paper-soft);opacity:1}
@@ -284,31 +289,32 @@ section[id],header[id]{scroll-margin-top:104px}
     <a class="logo" href="#top" aria-label="NDM Boje">
       <span class="logo-word">NDM BOJE<small>VRANJE</small></span>
     </a>
-      </div>
+    <span class="lang" role="group" aria-label="Jezik / Jazyk"><button type="button" id="l-sr" aria-pressed="true">SR</button><button type="button" id="l-cs" aria-pressed="false">CZ</button></span>
+  </div>
   <div class="subnav">
     <nav class="nav subnav-in" aria-label="Glavna navigacija">
-      <a href="#o-nama">O nama</a>
-      <a href="#asortiman">Asortiman</a>
-      <a href="#brendovi">Brendovi</a>
-      <a href="#kontakt">Kontakt</a>
+      <a href="#o-nama" data-cs="O nás">O nama</a>
+      <a href="#asortiman" data-cs="Sortiment">Asortiman</a>
+      <a href="#brendovi" data-cs="Značky">Brendovi</a>
+      <a href="#kontakt" data-cs="Kontakt">Kontakt</a>
     </nav>
   </div>
 </div>
 <header class="band dark hero" id="top">
   <div class="in">
     <div class="hero-copy">
-      <span class="eyebrow">Prodavnica boja i lakova · Vranje</span>
-      <h1>Boje, lakovi i sve za renoviranje <mark>na jednom mestu</mark></h1>
-      <p class="lead">NDM Boje u Vranju. Boje za zidove i fasade, lakovi i lazure za drvo i metal, građevinska hemija i alat pod jednim krovom.</p>
+      <span class="eyebrow" data-cs="Prodejna barev a laků · Vranje">Prodavnica boja i lakova · Vranje</span>
+      <h1 data-cs="Barvy, laky a vše pro renovaci <mark>na jednom místě</mark>">Boje, lakovi i sve za renoviranje <mark>na jednom mestu</mark></h1>
+      <p class="lead" data-cs="NDM Boje ve Vranji. Barvy na zdi i fasády, laky a lazury na dřevo a kov, stavební chemie a nářadí pod jednou střechou.">NDM Boje u Vranju. Boje za zidove i fasade, lakovi i lazure za drvo i metal, građevinska hemija i alat pod jednim krovom.</p>
       <div class="btns">
-        <a class="btn btn-y" href="tel:+38162509095"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span>Pozovite nas</span></a>
-        <a class="btn btn-o" href="#kontakt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Posetite prodavnicu</span></a>
+        <a class="btn btn-y" href="tel:+38162509095"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span data-cs="Zavolejte nám">Pozovite nas</span></a>
+        <a class="btn btn-o" href="#kontakt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span data-cs="Navštivte prodejnu">Posetite prodavnicu</span></a>
       </div>
-      <div class="hero-phone"><a href="tel:+38162509095" style="text-decoration:none">+381 62 509 095</a> · <span>Pon–Pet 08:00–15:30, Sub 08:00–14:00</span></div>
+      <div class="hero-phone"><a href="tel:+38162509095" style="text-decoration:none">+381 62 509 095</a> · <span data-cs="Po–Pá 8–15:30, So 8–14">Pon–Pet 8–15:30, Sub 8–14</span></div>
     </div>
     <figure class="hero-photo" style="margin:0">
       <div class="frame"><img src="images/prodavnica.jpg" alt="Prodavnica NDM Boje sa muralima, žutom tendom i crvenom tablom NDM BOJE u ulici Sime Pogačarevića 16" width="1600" height="900" fetchpriority="high"></div>
-      <figcaption class="tag">Sime Pogačarevića 16<small>17500 VRANJE</small></figcaption>
+      <figcaption class="tag" data-cs="Sime Pogačarevića 16<small>17500 VRANJE</small>">Sime Pogačarevića 16<small>17500 VRANJE</small></figcaption>
     </figure>
   </div>
 </header>
@@ -319,22 +325,22 @@ section[id],header[id]{scroll-margin-top:104px}
 <section class="band light" id="o-nama">
   <div class="in about">
     <div class="about-text">
-      <span class="eyebrow">O nama</span>
-      <h2>Vaša prodavnica boja i lakova u Vranju</h2>
-      <p>NDM Boje je prodavnica boja i lakova Nenada Ranđelovića u ulici Sime Pogačarevića 16. Nudimo boje, lakove, lazure, građevinsku hemiju, alat, sprejeve i proizvode za auto-reparaturu proverenih proizvođača. Prodajemo i termoizolaciju (Austrotherm stiropor, Thermowool, Eksitherm i ETICS fasadni sistemi), a boje toniramo i na mašini. Bilo da krečite sobu, farbate ogradu ili renovirate kupatilo, kod nas ćete naći sve što vam treba, a rado ćemo vam pomoći pri izboru.</p>
-      <p>Kroz godine rada sa kupcima, od majstora do ljudi koji sami renoviraju, naučili smo da je dobar savet jednako važan kao i dobra boja. Zato za svakog kupca imamo vremena, pomažemo mu da izabere nijansu iz tonske karte i preporučujemo materijal koji traje.</p>
+      <span class="eyebrow" data-cs="O nás">O nama</span>
+      <h2 data-cs="Vaše prodejna barev a laků ve Vranji">Vaša prodavnica boja i lakova u Vranju</h2>
+      <p data-cs="NDM Boje je prodejna barev a laků Nenada Ranđeloviće na adrese Sime Pogačarevića 16. Nabízíme barvy, laky, lazury, stavební chemii a nářadí od ověřených značek. Prodáváme i tepelnou izolaci (Austrotherm EPS, Thermowool, fasádní systémy Eksitherm a ETICS) a nabízíme tónování barev na stroji. Ať malujete pokoj, natíráte plot, nebo opravujete koupelnu, u nás najdete, co potřebujete, a rádi vám poradíme s výběrem.">NDM Boje je prodavnica boja i lakova Nenada Ranđelovića u ulici Sime Pogačarevića 16. Nudimo boje, lakove, lazure, građevinsku hemiju i alat proverenih proizvođača. Prodajemo i termoizolaciju (Austrotherm stiropor, Thermowool, Eksitherm i ETICS fasadni sistemi), a nudimo i toniranje boja na mašini. Bilo da krečite sobu, farbate ogradu ili renovirate kupatilo, kod nas ćete naći sve što vam treba, a rado ćemo vam pomoći oko izbora.</p>
+      <p data-cs="Za léta prodeje řemeslníkům i kutilům jsme se naučili, že dobrá rada je stejně důležitá jako dobrá barva. Proto si na každého zákazníka uděláme čas, namícháme odstín podle vzorníku a doporučíme materiál, který vydrží.">Kroz godine rada sa kupcima, od majstora do ljudi koji sami renoviraju, naučili smo da je dobar savet jednako važan kao i dobra boja. Zato za svakog kupca imamo vremena, pomažemo oko izbora nijanse po tonskoj karti i preporučujemo materijal koji traje.</p>
       <div class="why">
         <div><i style="background:var(--yellow)"><svg viewBox="0 0 24 24" fill="none" stroke="#1B2430" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="1"/><path d="M8 7V4h8v3M3 12h18"/></svg></i>
-          <div><b>Sve na jednom mestu</b><span>Od boje do četke i zavrtnja.</span></div></div>
+          <div><b data-cs="Vše na jednom místě">Sve na jednom mestu</b><span data-cs="Od barvy po štětec a šroub.">Od boje do četke i šrafa.</span></div></div>
         <div><i style="background:var(--red)"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.6 5.6 6 .7-4.5 4.1 1.2 6L12 16.4 6.7 19.4l1.2-6L3.4 9.3l6-.7z"/></svg></i>
-          <div><b>Provereni brendovi</b><span>Kvalitni domaći i strani proizvođači.</span></div></div>
+          <div><b data-cs="Ověřené značky">Provereni brendovi</b><span data-cs="Kvalitní domácí i zahraniční výrobci.">Kvalitni domaći i strani proizvođači.</span></div></div>
         <div><i style="background:var(--dark)"><svg viewBox="0 0 24 24" fill="none" stroke="#F2C230" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/></svg></i>
-          <div><b>Lični pristup</b><span>Rado ćemo vas posavetovati pri izboru.</span></div></div>
+          <div><b data-cs="Osobní přístup">Lični pristup</b><span data-cs="Rádi poradíme s výběrem.">Rado ćemo vam dati savet pri izboru.</span></div></div>
       </div>
     </div>
     <figure class="owner" style="margin:0">
-      <div class="owner-card"><div><div class="mono" aria-hidden="true">NR</div><strong>Nenad Ranđelović</strong><span>Rado će vam pomoći pri izboru</span></div></div>
-      <figcaption><span>Nenad Ranđelović, vlasnik</span></figcaption>
+      <div class="owner-card"><div><div class="mono" aria-hidden="true">NR</div><strong>Nenad Ranđelović</strong><span data-cs="Rád vám poradí s výběrem">Rado će vam pomoći oko izbora</span></div></div>
+      <figcaption><span data-cs="Nenad Ranđelović, majitel">Nenad Ranđelović, vlasnik</span></figcaption>
     </figure>
   </div>
 </section>
@@ -343,46 +349,46 @@ section[id],header[id]{scroll-margin-top:104px}
 <section class="band dark" id="asortiman">
   <div class="in">
     <div class="head">
-      <span class="eyebrow">Asortiman</span>
-      <h2>Šta ćete kod nas naći</h2>
-      <p>Devet odeljenja jedne prodavnice. Ako nešto ne vidite, pitajte, često to imamo na stanju.</p>
+      <span class="eyebrow" data-cs="Sortiment">Asortiman</span>
+      <h2 data-cs="Co u nás najdete">Šta ćete kod nas naći</h2>
+      <p data-cs="Devět oddělení jedné prodejny. Pokud něco nevidíte, zeptejte se, často to máme skladem.">Devet odeljenja jedne prodavnice. Ako nešto ne vidite, pitajte, često imamo na stanju.</p>
     </div>
     <div class="cards">
       <article class="card"><div class="img"><img src="images/maxidis-maxipol-kante.jpg" alt="Kante Maxidis i Maxipol boja za zidove sa tonskim kartama Cool Pastel i Fantasy Colour" width="800" height="1067" loading="lazy" decoding="async" style="object-position:center 35%"><span class="chip" style="background:#F4F1EA"></span></div>
-        <div class="body"><h3>Boje za zidove i fasade</h3>
-        <p>Enterijerske i fasadne boje, bele i pastelne nijanse. Periva boja za kuhinje i hodnike.</p>
+        <div class="body"><h3 data-cs="Barvy na zdi a fasády">Boje za zidove i fasade</h3>
+        <p data-cs="Interiérové a fasádní barvy, bílé i pastelové odstíny. Omyvatelné barvy pro kuchyně a chodby.">Unutrašnje i fasadne boje, bele i pastelne nijanse. Periva boja za kuhinje i hodnike.</p>
         <span class="brands">Maxima Maxipol · Cool</span></div></article>
       <article class="card"><div class="img"><img src="images/emajli-lakovi-police.jpg" alt="Police sa Cool Professional emajlima, nitro bojama, Hemmax lazurama i tonskim kartama" width="800" height="600" loading="lazy" decoding="async" style="object-position:center 40%"><span class="chip" style="background:#C0392B"></span></div>
-        <div class="body"><h3>Lakovi i emajli</h3>
-        <p>Za drvo i metal: sintetički i nitro emajli, lakovi i boje za beton, u desetinama nijansi.</p>
+        <div class="body"><h3 data-cs="Laky a emaily">Lakovi i emajli</h3>
+        <p data-cs="Na dřevo i kov: syntetické a nitro emaily, laky a barvy na beton v desítkách odstínů.">Za drvo i metal: sintetičke i nitro emajli, lakovi i boje za beton, u desetinama nijansi.</p>
         <span class="brands">Irkom Sintex · Hemmax · Heyda · Betonal</span></div></article>
       <article class="card"><div class="img"><img src="images/irkom-aqua-lazure.jpg" alt="Irkom Aqualin lazure za drvo na policama" width="800" height="600" loading="lazy" decoding="async" style="object-position:center 30%"><span class="chip" style="background:#8B5A2B"></span></div>
-        <div class="body"><h3>Lazure za drvo</h3>
-        <p>Za ograde, pergole i nameštaj. Nijanse bor, tik, orah, ebanovina, mahagoni, hrast, palisandar.</p>
+        <div class="body"><h3 data-cs="Lazury na dřevo">Lazure za drvo</h3>
+        <p data-cs="Pro ploty, pergoly i nábytek. Odstíny bor, týk, ořech, eben, mahagon, dub, palisandr.">Za ograde, pergole i nameštaj. Nijanse bor, tik, orah, ebanovina, mahagoni, hrast, palisandar.</p>
         <span class="brands">Irkom Aqua · Irkom 3u1 · Hemmax</span></div></article>
       <article class="card"><div class="img"><img src="images/isomat-multifill-fugomase.jpg" alt="Isomat Multifill Smalto fugomase na policama" width="800" height="1067" loading="lazy" decoding="async" style="object-position:center 12%"><span class="chip" style="background:#E4572E"></span></div>
-        <div class="body"><h3>Građevinska hemija</h3>
-        <p>Hidroizolacija, lepkovi za pločice, fugomase u više od 30 boja, glet mase.</p>
+        <div class="body"><h3 data-cs="Stavební chemie">Građevinska hemija</h3>
+        <p data-cs="Hydroizolace, lepidla na obklady, spárovací hmoty ve více než 30 barvách, gletovací hmoty.">Hidroizolacija, lepkovi za pločice, fugomase u više od 30 boja, glet mase.</p>
         <span class="brands">Isomat · Ceresit · Knauf · Maxima</span></div></article>
       <article class="card"><div class="img"><img src="images/alat-lepkovi-zid.jpg" alt="Zid sa alatom, gletaricama i valjcima, ispod džakovi Knauf, Ceresit i Isomat lepkova" width="800" height="1067" loading="lazy" decoding="async" style="object-position:center 30%"><span class="chip" style="background:#F2C230"></span></div>
-        <div class="body"><h3>Četke i valjci</h3>
-        <p>Četke, valjci i pribor za krečenje i farbanje, uključujući i one za fasade i specijalne premaze.</p>
+        <div class="body"><h3 data-cs="Štětce a válečky">Četke i valjci</h3>
+        <p data-cs="Štětce, válečky a příslušenství na malování a natírání, i na fasády a speciální nátěry.">Četke, valjci i pribor za krečenje i farbanje, posebno i za fasade i specijalne premaze.</p>
         <span class="brands">Beorol</span></div></article>
       <article class="card"><div class="img"><img src="images/sprejevi-stalak.jpg" alt="Stalci sa sprejevima u boji i Happy Color" width="800" height="1067" loading="lazy" decoding="async" style="object-position:center 40%"><span class="chip" style="background:#3E7CB1"></span></div>
-        <div class="body"><h3>Sprejevi i razređivači</h3>
-        <p>Sprejevi u desetinama nijansi, nitro i uljani razređivač, firnis, terpentin.</p>
+        <div class="body"><h3 data-cs="Spreje a ředidla">Sprejevi i razređivači</h3>
+        <p data-cs="Barevné spreje v desítkách odstínů, nitro a olejové ředidlo, firnis, terpentýn.">Sprejevi u desetinama nijansi, nitro i uljani razređivač, firnis, terpentin.</p>
         <span class="brands">RAL</span></div></article>
       <article class="card"><div class="img"><img src="images/enterijer-alat-police.jpg" alt="Unutrašnjost prodavnice sa policama alata i džakovima Eksitherm" width="800" height="1067" loading="lazy" decoding="async" style="object-position:center 8%"><span class="chip" style="background:#7BA05B"></span></div>
-        <div class="body"><h3>Alat i pričvršćivanje</h3>
-        <p>Ručni alat, rezne ploče, brusni papir, tiplovi, zavrtnji i ankeri.</p>
+        <div class="body"><h3 data-cs="Nářadí a upevnění">Alat i pričvršćivanje</h3>
+        <p data-cs="Ruční nářadí, řezné kotouče, brusné papíry, hmoždinky, šrouby a kotvy.">Ručni alat, rezne ploče, brusni papir, tiplovi, šrafovi i ankeri.</p>
         <span class="brands">Fischer · Festa · Smirdex</span></div></article>
       <article class="card"><div class="img"><img src="images/ceresit-isoflex-prajmeri.jpg" alt="Police sa Isoflex hidroizolacijom, Ceresit prajmerima i pigmentima" width="800" height="1067" loading="lazy" decoding="async" style="object-position:center 50%"><span class="chip" style="background:#F28C28"></span></div>
-        <div class="body"><h3>Rukavice i zaštita</h3>
-        <p>Radne rukavice za svaki posao, zaštitne naočare, silikoni i PU pena.</p>
+        <div class="body"><h3 data-cs="Rukavice a ochrana">Rukavice i zaštita</h3>
+        <p data-cs="Pracovní rukavice na každou práci, ochranné brýle, silikony a PU pěna.">Radne rukavice za svaki posao, zaštitne naočare, silikoni i PU pena.</p>
         <span class="brands">Himera · Beorol</span></div></article>
       <article class="card"><div class="img"><img src="images/irkom-body-auto.jpg" alt="Police sa Irkom Mehano, 3u1 i Sintex bojama i Body proizvodima za auto-reparaturu" width="800" height="1067" loading="lazy" decoding="async" style="object-position:center 45%"><span class="chip" style="background:#5B6A7A"></span></div>
-        <div class="body"><h3>Auto-reparatura</h3>
-        <p>Kitovi i punila za karoseriju, prajmeri i boje za metal.</p>
+        <div class="body"><h3 data-cs="Opravy karoserií">Auto-reparatura</h3>
+        <p data-cs="Tmely a plniva na karoserie, základové barvy a barvy na kov.">Kitovi i punila za karoseriju, prajmeri i boje za metal.</p>
         <span class="brands">Body · Irkom</span></div></article>
     </div>
   </div>
@@ -392,13 +398,13 @@ section[id],header[id]{scroll-margin-top:104px}
 <section class="band light" id="brendovi">
   <div class="in">
     <div class="head">
-      <span class="eyebrow">Brendovi</span>
-      <h2>Brendovi sa kojima radimo</h2>
+      <span class="eyebrow" data-cs="Značky">Brendovi</span>
+      <h2 data-cs="Značky, se kterými pracujeme">Brendovi sa kojima radimo</h2>
     </div>
     <div class="brands-grid">
       <div class="brand">MAXIMA</div><div class="brand">ISOMAT</div><div class="brand">HEMMAX</div><div class="brand">IRKOM</div><div class="brand">BEOROL</div><div class="brand">FISCHER</div><div class="brand">FESTA</div><div class="brand">SMIRDEX</div><div class="brand">HEYDA</div><div class="brand">BETONAL</div><div class="brand">BODY</div><div class="brand">HIMERA</div><div class="brand">CERESIT</div><div class="brand">KNAUF</div><div class="brand">JUB</div><div class="brand">AUSTROTHERM</div><div class="brand">THERMOWOOL</div><div class="brand">EKSITHERM</div><div class="brand">NEVENA COLOR</div><div class="brand">COOL</div>
     </div>
-    <p class="brands-note">I drugi domaći i strani proizvođači. Pitajte za konkretan proizvod.</p>
+    <p class="brands-note" data-cs="A další domácí i zahraniční výrobci. Zeptejte se na konkrétní produkt.">I drugi domaći i strani proizvođači. Pitajte za konkretan proizvod.</p>
   </div>
 </section>
 
@@ -406,8 +412,8 @@ section[id],header[id]{scroll-margin-top:104px}
 <section class="band dark" id="galerija">
   <div class="in">
     <div class="head">
-      <span class="eyebrow">Galerija</span>
-      <h2>Zavirite u prodavnicu</h2>
+      <span class="eyebrow" data-cs="Galerie">Galerija</span>
+      <h2 data-cs="Nahlédněte do prodejny">Zavirite u prodavnicu</h2>
     </div>
     <div class="gallery">
       <figure><img src="images/prodavnica-ugao.jpg" alt="Ugao prodavnice NDM Boje sa muralima" width="800" height="450" loading="lazy" decoding="async" style="object-position:center"></figure>
@@ -426,33 +432,33 @@ section[id],header[id]{scroll-margin-top:104px}
 <section class="band light" id="kontakt">
   <div class="in">
     <div class="head">
-      <span class="eyebrow">Kontakt</span>
-      <h2>Posetite našu prodavnicu</h2>
+      <span class="eyebrow" data-cs="Kontakt">Kontakt</span>
+      <h2 data-cs="Navštivte naši prodejnu">Posetite našu prodavnicu</h2>
     </div>
     <div class="contact">
       <div>
         <dl class="c-list" style="margin:0">
-          <div class="c-row"><dt>Adresa</dt><dd><span><span class="big">Sime Pogačarevića 16</span><br><span>17500 Vranje, Srbija</span></span></dd></div>
-          <div class="c-row"><dt>Telefon</dt><dd><a class="big" id="tel" href="tel:+38162509095" style="text-decoration:none">+381 62 509 095</a><button class="copy" type="button" data-copy="+381 62 509 095">Kopiraj</button></dd></div>
-          <div class="c-row"><dt>Viber</dt><dd><a href="viber://chat?number=%2B38162509095">+381 62 509 095</a> <span>(pišite nam)</span></dd></div>
-          <div class="c-row"><dt>Radno vreme</dt><dd>
+          <div class="c-row"><dt data-cs="Adresa">Adresa</dt><dd><span><span class="big">Sime Pogačarevića 16</span><br><span data-cs="17500 Vranje, Srbsko">17500 Vranje, Srbija</span></span></dd></div>
+          <div class="c-row"><dt data-cs="Telefon">Telefon</dt><dd><a class="big" id="tel" href="tel:+38162509095" style="text-decoration:none">+381 62 509 095</a><button class="copy" type="button" data-copy="+381 62 509 095" data-cs="Kopírovat">Kopiraj</button></dd></div>
+          <div class="c-row"><dt>Viber</dt><dd><a href="viber://chat?number=%2B38162509095">+381 62 509 095</a> <span data-cs="(napište nám)">(pišite nam)</span></dd></div>
+          <div class="c-row"><dt data-cs="Otevírací doba">Radno vreme</dt><dd>
             <div class="hours">
-              <span>Pon – Pet</span><span>08:00 – 15:30</span>
-              <span>Subota</span><span>08:00 – 14:00</span>
-              <span>Nedelja</span><span class="closed">Zatvoreno</span>
+              <span data-cs="Po – Pá">Pon – Pet</span><span>08:00 – 15:30</span>
+              <span data-cs="Sobota">Subota</span><span>08:00 – 14:00</span>
+              <span data-cs="Neděle">Nedelja</span><span class="closed" data-cs="Zavřeno">Zatvoreno</span>
             </div></dd></div>
           <div class="c-row"><dt>Instagram</dt><dd><a href="https://www.instagram.com/ndm.boje/" target="_blank" rel="noopener">@ndm.boje</a></dd></div>
         </dl>
         <div class="cta">
-          <b>Niste sigurni šta da izaberete ili želite da proverite da li imamo robu na stanju?</b>
-          <p>Pozovite nas ili svratite u prodavnicu. Radujemo se vašoj poseti! 😃</p>
+          <b data-cs="Nevíte, co vybrat, nebo chcete ověřit, zda máme zboží skladem?">Niste sigurni šta da izaberete ili želite da proverite da li imamo robu na stanju?</b>
+          <p data-cs="Zavolejte nám nebo se zastavte v prodejně. Těšíme se na vás! 😃">Pozovite nas ili svratite u prodavnicu. Posetite nas i uživajte u kupovini! 😃</p>
         </div>
       </div>
       <div class="mapcard">
         <div class="map"><iframe src="https://www.google.com/maps?q=Sime+Poga%C4%8Darevi%C4%87a+16,+Vranje&amp;output=embed" title="Mapa: Sime Pogačarevića 16, Vranje" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
         <div class="foot">
-          <p>Sime Pogačarevića 16, 17500 Vranje</p>
-          <a class="btn btn-r" href="https://www.google.com/maps/dir/?api=1&amp;destination=Sime+Poga%C4%8Darevi%C4%87a+16%2C+17500+Vranje" target="_blank" rel="noopener"><span>Navigacija</span></a>
+          <p data-cs="Sime Pogačarevića 16, 17500 Vranje">Sime Pogačarevića 16, 17500 Vranje</p>
+          <a class="btn btn-r" href="https://www.google.com/maps/dir/?api=1&amp;destination=Sime+Poga%C4%8Darevi%C4%87a+16%2C+17500+Vranje" target="_blank" rel="noopener"><span data-cs="Navigace">Navigacija</span></a>
         </div>
       </div>
     </div>
@@ -465,11 +471,11 @@ section[id],header[id]{scroll-margin-top:104px}
 <footer class="band dark">
   <div class="in">
     <a class="logo" href="#top"><span class="logo-word">NDM BOJE<small>VRANJE</small></span></a>
-    <span class="legal">Nenad Ranđelović PR Trgovinska radnja NDM Boje Vranje · Sime Pogačarevića 16, 17500 Vranje · <span>MB / PIB</span>: 12345678 / 123456789<br><span class="demo-note">Demo verzija – podaci su ilustrativni</span></span>
+    <span class="legal">Nenad Ranđelović PR Trgovinska radnja NDM Boje Vranje · Sime Pogačarevića 16, 17500 Vranje · <span data-cs="IČO / DIČ">MB / PIB</span>: 12345678 / 123456789<br><span class="demo-note" data-cs="Demo verze – údaje jsou ilustrativní">Demo verze – podaci su ilustrativni</span></span>
   </div>
 </footer>
 
-<a class="totop" id="totop" href="#top" aria-label="Nazad na vrh" title="Nazad na vrh"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg></a>
+<a class="totop" id="totop" href="#top" aria-label="Nazad na vrh" data-cs-label="Zpět nahoru" title="Nazad na vrh"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg></a>
 
 <script>
 (function(){
@@ -478,6 +484,20 @@ section[id],header[id]{scroll-margin-top:104px}
   function fill(id,rev){var el=document.getElementById(id);if(!el)return;var l=rev?a.slice().reverse():a;
     el.innerHTML=l.map(function(c){return '<span style="background:'+c+'"></span>'}).join('')}
   fill('sw1');fill('sw2',true);
+
+  // SR / CZ
+  var nodes=[].slice.call(document.querySelectorAll('[data-cs]'));
+  nodes.forEach(function(n){n.setAttribute('data-sr',n.innerHTML)});
+  function setLang(l){nodes.forEach(function(n){n.innerHTML=n.getAttribute(l==='cs'?'data-cs':'data-sr')});
+    document.documentElement.lang=l==='cs'?'cs':'sr-Latn';
+    document.getElementById('l-sr').setAttribute('aria-pressed',l==='sr');document.getElementById('l-cs').setAttribute('aria-pressed',l==='cs');
+    var tt=document.getElementById('totop'),lab=l==='cs'?'Zpět nahoru':'Nazad na vrh';tt.setAttribute('aria-label',lab);tt.title=lab;
+    try{localStorage.setItem('ndm-lang',l)}catch(e){}}
+  document.getElementById('l-sr').onclick=function(){setLang('sr')};
+  document.getElementById('l-cs').onclick=function(){setLang('cs')};
+  var saved='sr';try{saved=localStorage.getItem('ndm-lang')||'sr'}catch(e){}
+  setLang(saved);
+
 
   // nazad na vrh
   var tt=document.getElementById('totop');
